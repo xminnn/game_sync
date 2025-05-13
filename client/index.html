@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        body {
+            margin: 0;
+            background-color: #222;
+        }
+        canvas {
+            background-color: #333;
+        }
+
+        #bottom {
+            position: absolute;
+            top: 320px;
+            left: 0;
+            width: 50px;
+            height: 20px;
+            background-color: aqua;
+            display: inline-block;
+        }
+    </style>
+    <canvas id="canvas1" style="width: 300px; height: 300px; position: absolute; top: 0; left: 0;" width="300" height="300"></canvas>
+    <canvas id="canvas2" style="width: 300px; height: 300px; position: absolute; top: 0; left: 320px;" width="300" height="300"></canvas>
+    <script src="./player_compute.js"></script>
+    <script src="./index.js"></script>
+    <script>
+        const canvas1 = document.getElementById("canvas1");
+        const canvas2 = document.getElementById("canvas2");
+        PlayerRender(canvas1, true);
+        PlayerRender(canvas2)
+
+    </script>
+</body>
+
+</html>
